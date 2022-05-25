@@ -19,16 +19,17 @@ include 'data.php';
 
     </header>
     <main>
-        <?php
-        foreach($dati as $album){
-            ?>
-             '<img src="<?php echo $album['poster'] ?>"/>';
-            <h1><?php echo $album['title']; ?></h1>
-            <h2><?php echo $album['author']; ?></h2>
-            <h3><?php echo $album['year']; ?></h3>
-            <?php
-        }
-        ?>
+        <div id="containerCards">
+            <div class="card">
+                <?php foreach($dati as $album){ ?>
+                    <img src="<?php echo $album['poster']; ?>"/>
+                    <h1><?php echo $album['title']; ?></h1>
+                    <h2><?php echo $album['author']; ?></h2>
+                    <h3><?php echo $album['year']; ?></h3>
+                <?php } ?>
+            </div>
+
+        </div>
     </main>
 </body>
 </html>
